@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Close chat box
-    closeChat.addEventListener("click", function () {
-      chatBox.style.display = "none";
+    closeChat.addEventListener("touchstart", function () {
+      chatBox.style.display = "flex";
     });
 
     // Function to display messages
