@@ -111,6 +111,20 @@ a:focus {
   background: #f5f518;
   transform: scale(1.05);
 }
+@media (max-width: 768px) {
+  .quote_btn-container {
+    display: block !important;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .quote_btn {
+    display: inline-block !important;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
 
 /* ✅ Smooth fade-in animation */
 .fade-in {
