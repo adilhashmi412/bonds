@@ -173,6 +173,12 @@ a:focus {
 }
 
 /* Chat Box */
+@media only screen and (max-width: 600px) {
+  #chat-box {
+    width: 250px; /* Adjust width for mobile */
+    bottom: 50px; /* Adjust position */
+  }
+}
 #chat-box {
   position: fixed;
   bottom: 80px;
