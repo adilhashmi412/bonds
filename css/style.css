@@ -149,7 +149,7 @@ a:focus {
   }
 }
 
-/* Chat Button */
+/* start Chat Button */
 #chat-button {
   position: fixed;
   bottom: 20px;
@@ -173,13 +173,6 @@ a:focus {
 }
 
 /* Chat Box */
-@media only screen and (max-width: 600px) {
-  #chat-box {
-    width: 250px; /* Adjust width for mobile */
-    bottom: 50px; /* Adjust position */
-  }
-}
-/* Chat Box */
 #chat-box {
   position: fixed;
   bottom: 80px;
@@ -191,16 +184,29 @@ a:focus {
   overflow: hidden;
   display: none;
   flex-direction: column;
-  border-top: 4px solid #ffa900;
+  border-top: 4px solid #f5f518;
 }
 
 #chat-header {
-  background: #ffa900;
+  background: #f5f518;
   color: white;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+/* Online Green Dot */
+#online-status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background: #00ff00;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 #close-chat {
@@ -211,6 +217,7 @@ a:focus {
   cursor: pointer;
 }
 
+/* Chat Content */
 #chat-content {
   display: flex;
   flex-direction: column;
@@ -223,36 +230,91 @@ a:focus {
   overflow-y: auto;
 }
 
+#chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* Chat Input Area */
+#chat-input-area {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the elements */
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* Chat Input */
 #chat-input {
-  width: 80%;
+  flex: 1; /* Make the input field take up the remaining space */
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  font-size: 14px;
 }
 
-#send-chat {
-  width: 18%;
-  background: #ffa900;
+/* Buttons (Send and Docs) */
+#send-chat,
+#docs-chat {
+  background: #f5f518;
   color: white;
   border: none;
-  padding: 8px;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  border-radius: 5px;
-  margin-left: 5px;
+  font-size: 18px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
 }
 
-#send-chat:hover {
-  background: #cc8500;
+#send-chat:hover,
+#docs-chat:hover {
+  background: #f5f518;
+}
+
+/* Specific Icons for Buttons */
+#send-chat i,
+#docs-chat i {
+  font-size: 16px;
+}
+
+/* Insert and Docs Buttons */
+#insert-docs-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  gap: 10px;
+}
+
+#insert-button,
+#docs-button {
+  background: #f5f518;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#insert-button:hover,
+#docs-button:hover {
+  background: #f5f518;
 }
 
 /* For responsiveness */
 @media only screen and (max-width: 600px) {
   #chat-box {
-    width: 910%;
+    width: 90%;
     bottom: 10px;
   }
 }
-
+/* end of chatbox */
 
 /* curve image home page header section*/
 .hero_area {

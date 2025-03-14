@@ -109,17 +109,24 @@
 
 <!-- Chat Box -->
 <div id="chat-box">
-  <div id="chat-header">
+  <div id="chat-header" >
+    <div
+      data-hook="online-indicator"
+      class="eTLNn"
+      style="width: 10px; height: 10px; background-color: green; border-radius: 50%; border: 1px solid rgb(255, 255, 255); margin-right: 10px;"
+    ></div>
     <span>AI Chat</span>
     <button id="close-chat">&times;</button>
   </div>
   <div id="chat-content">
     <div id="chat-messages"></div>
     <div id="chat-input-area">
-      <input type="text" id="chat-input" placeholder="Hi!How Can I Help You...">
+      <input type="text" id="chat-input" placeholder="Hi! How Can I Help You...">
       <button id="send-chat"><i class="fa fa-paper-plane"></i></button>
+      <button id="docs-chat"><i class="fa fa-folder"></i></button>
     </div>
   </div>
+  
 </div>
 <!-- Chat Button end -->
  <!-- Link to your JavaScript file -->
