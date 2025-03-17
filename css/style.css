@@ -102,7 +102,7 @@ a:focus {
   padding: 12px 24px;
   font-size: 18px;
   background: #f5f518;
-  color: #002f4b;
+  color: #080808;
   border-radius: 30px;
   transition: 0.3s ease-in-out;
 }
@@ -149,6 +149,71 @@ a:focus {
   }
 }
 
+
+/* Zigzag Square Buttons Section */
+.zigzag-buttons {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.zigzag-button {
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.zigzag-button:hover {
+  transform: translateY(-10px);
+}
+
+.button-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.zigzag-button:hover .button-image {
+  transform: scale(1.1);
+}
+
+.button-content {
+  margin-top: 20px;
+}
+
+.button-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.button-content p {
+  color: #666;
+  margin: 10px 0;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
 /* start Chat Button */
 #chat-button {
   position: fixed;
@@ -166,6 +231,7 @@ a:focus {
   font-size: 24px;
   transition: 0.3s ease-in-out;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999; /* Ensures the chat button stays above other elements */
 }
 
 #chat-button:hover {
@@ -241,7 +307,7 @@ a:focus {
 #chat-input-area {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between the elements */
+  gap: 7px; /* Space between the elements */
   padding: 10px;
   border-top: 1px solid #ddd;
 }
@@ -286,6 +352,7 @@ a:focus {
 /* Insert and Docs Buttons */
 #insert-docs-container {
   display: flex;
+  position: fixed;
   justify-content: flex-end;
   padding: 10px;
   gap: 10px;
@@ -320,7 +387,7 @@ a:focus {
 .hero_area {
   position: relative;
   min-height: 100vh;
-  background-color: #f5f518;
+  background-color: #0f0f01;
   border-radius: 0 0 350px 0;
   overflow: hidden; /* Prevents overflow issues */
 }
@@ -736,41 +803,51 @@ a:focus {
           transform: translateY(-3px);
 }
 
+/* about section css start */
 .about_section {
-  background-color: #f5f518;
-  color: #ffffff;
-  border-radius: 250px 0 250px 0;
-}
-
-.about_section .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.about_section .img-box {
   position: relative;
+  background-color: #f5f5f5; /* Light background */
+  border-radius: 0 250px 250px 0; /* Curved shape on one side */
+  padding: 80px 20px;
+  overflow: hidden; /* Ensures clean shape */
 }
 
-.about_section .img-box img {
-  width: 100%;
+.about_section .detail-box {
+  padding: 20px;
+}
+
+.about_section .detail-box h2 {
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
 }
 
 .about_section .detail-box p {
-  margin-top: 15px;
+  font-size: 16px;
+  color: #555;
 }
 
 .about_section .detail-box a {
-  display: inline-block;
-  padding: 10px 45px;
-  background-color: #f8842b;
-  color: #ffffff;
-  border-radius: 5px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border: 1px solid #f8842b;
-  margin-top: 15px;
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
 }
+
+.about_section .image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 250px 0 250px; /* Match the curved section */
+  height: 350px; /* Adjust height as needed */
+}
+
+.about_section .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures full image coverage */
+  border-radius: 0 250px 0 250px;
+}
+
+/* about section css end */
 
 .about_section .detail-box a:hover {
   color: #ffffff;
@@ -981,10 +1058,11 @@ a:focus {
 }
 
 .footer_container {
-  background-color: #f5f518;
-  color: #ffffff;
-  border-radius: 350px 0 0 0;
-  padding-top: 145px;
+  position: relative;
+  background-color: #f5f5f5; /* Light background */
+  border-radius: 250px 0 0 250px; ; /* Curved shape on one side */
+  padding: 80px 20px;
+  overflow: hidden; /* Ensures clean shape */
 }
 
 /* info section */
@@ -1005,7 +1083,7 @@ a:focus {
 
 .info_section .info_contact .contact_link_box a {
   margin: 5px 0;
-  color: #ffffff;
+  
 }
 
 .info_section .info_contact .contact_link_box a i {
@@ -1033,7 +1111,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ffffff;
+  color: #000000;
   border-radius: 100%;
   margin-right: 10px;
   font-size: 24px;
@@ -1063,7 +1141,7 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .info_section .info_links a:hover {
