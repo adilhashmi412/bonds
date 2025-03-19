@@ -33,7 +33,13 @@ body {
 .layout_padding-bottom {
   padding-bottom: 90px;
 }
-
+/* Service MAkeing curve */
+.heading_container { 
+  position: relative; background-color: #f5f5f5; /* Light background */ 
+  border-radius: 0 250px 250px 0; /* Curved shape on one side */ 
+  padding: 80px 20px; 
+  overflow: hidden; /* Ensures clean shape */
+}
 .heading_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,7 +169,7 @@ a:focus {
   border: 2px solid #ccc;
   border-radius: 228px;
   padding: 20px;
-  margin: 10px;
+  margin: 1t0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -435,10 +441,10 @@ button:hover {
 
 .company-name {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #222; /* Adjust for contrast */
+  color: #f5f518; /* Adjust for contrast */
   display: inline-block; /* Aligns well with the image */
   vertical-align: middle;
 }
@@ -813,6 +819,7 @@ button:hover {
   overflow: hidden; /* Ensures clean shape */
 }
 
+
 .about_section .detail-box {
   padding: 20px;
 }
@@ -834,18 +841,13 @@ button:hover {
   text-decoration: none;
 }
 
-.about_section .image-box {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0 250px 0 250px; /* Match the curved section */
-  height: 350px; /* Adjust height as needed */
-}
+
 
 .about_section .image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures full image coverage */
-  border-radius: 0 250px 0 250px;
+  border-radius: 0 250px 250px 0;
 }
 
 /* about section css end */
