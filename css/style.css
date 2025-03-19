@@ -158,12 +158,12 @@ a:focus {
 
 /* Zigzag Square Buttons Section */
 .zigzag-buttons {
-  margin-top: 150px;
+  margin-top: 50px;
   text-align: center;
 }
 
 .zigzag-button {
-  position: relative;
+  position: flex;
   overflow: hidden;
   background-color: #f5f5f5;
   border: 2px solid #ccc;
@@ -175,7 +175,7 @@ a:focus {
 }
 
 .zigzag-button:hover {
-  transform: translateY(-100px);
+  transform: translateY(-50px);
 }
 
 .button-image {
