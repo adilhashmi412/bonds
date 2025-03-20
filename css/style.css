@@ -262,12 +262,13 @@ button:hover {
 }
 /* Chat Input */
 #chat-input {
-  flex: 1; /* Take up available space */
+  flex: 1;  /* Takes up remaining space */
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 20px;
   font-size: 14px;
   outline: none;
+  height: 35px;  /* Same height as buttons */
 }
 
 /* Buttons (Send and Docs) */
@@ -276,9 +277,8 @@ button:hover {
   background: #f5f518;
   color: white;
   border: none;
-  padding: 10px;
   width: 40px;
-  height: 40px;
+  height: 40px;  /* Same height as input */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -289,43 +289,32 @@ button:hover {
   transition: background-color 0.3s ease-in-out;
 }
 
+/* Button Hover Effect */
 #send-chat:hover,
 #docs-chat:hover {
-  background: #000; /* Dark mode hover */
+  background: #0c0505;
+  align-items: center;
 }
 
-/* Specific Icons for Buttons */
-#send-chat i,
-#docs-chat i {
-  font-size: 16px;
-}
-
-/* For Small Screens */
+/* Mobile Responsiveness */
 @media only screen and (max-width: 600px) {
-  #chat-box {
-    width: 90%;
-    bottom: 10px;
-    right: 5%;
-  }
-
-  #chat-input-area {
-    flex-direction: row; /* Ensure buttons stay in line */
+  .chat-input-container {
+      padding: 5px;
   }
 
   #chat-input {
-    font-size: 16px;
+      height: 35px;  /* Reduce input height for smaller screens */
   }
 
   #send-chat,
   #docs-chat {
-    width: 45px;
-    height: 45px;
+      width: 35px;
+      height: 35px;  /* Adjust button height */
+      font-size: 16px;
   }
 }
 
-#chat-button:hover {
-  background: #000000;
-}
+
 
 /* Chat Box */
 #chat-box {
@@ -339,7 +328,7 @@ button:hover {
   overflow: hidden;
   display: none;
   flex-direction: column;
-  border-top: 4px solid #f5f518;
+  border-top: 0px solid #f5f518;
   z-index: 9999;
 }
 /* Chat Messages Area */
@@ -375,7 +364,7 @@ button:hover {
 #chat-header {
   background: #f5f518;
   color: white;
-  padding: 12px;
+  padding: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -401,10 +390,10 @@ button:hover {
   background: transparent;
   color: white;
   border: none;
+  align-items: center;
   font-size: 20px;
   cursor: pointer;
 }
-/* end of chat bot */
 /* Responsive Adjustments */
 @media only screen and (max-width: 600px) {
   #chat-box {

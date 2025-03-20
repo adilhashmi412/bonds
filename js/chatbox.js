@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Return HTML form as a string
       return `
       <div class="bot-message-container">
-            <p class="bot-message-text">"Please share your details so we can reach out to you, even if you leave the site.</p>
+            <p class="bot-message-text">"Kindly provide your details so we can contact you and assist you with your needs."</p>
           <form id="userForm">
               <label for="username">Name:</label>
               <input type="text" id="username" name="username" required><br>
@@ -85,10 +85,8 @@ function addMessage(sender, message) {
     
     // Append message
     chatMessages.appendChild(msgDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-
-  }
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+   
+}
 
   // Send message on button click
   sendChat.addEventListener("click", function () {
