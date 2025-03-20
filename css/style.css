@@ -219,8 +219,8 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+/* Start of chatbutton*/
 
-/* start Chat Button */
 #chat-button {
   position: fixed;
   bottom: 20px;
@@ -239,6 +239,82 @@ button:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 9999;
 }
+/* Chat Input Area */
+#chat-input-area {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between; /* Ensure spacing */
+  padding: 10px;
+  border-top: 1px solid #f5f518;
+  background: #fff;
+  gap: 5px; /* Add space between elements */
+  
+}
+
+/* Chat Input */
+#chat-input {
+  flex: 1; /* Take up available space */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  
+}
+
+/* Buttons (Send and Docs) */
+#send-chat,
+#docs-chat {
+  background: #f5f518;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#send-chat:hover,
+#docs-chat:hover {
+  background: #000; /* Dark mode hover */
+}
+
+/* Specific Icons for Buttons */
+#send-chat i,
+#docs-chat i {
+  font-size: 16px;
+}
+
+/* For Small Screens */
+@media only screen and (max-width: 600px) {
+  #chat-box {
+    width: 90%;
+    bottom: 10px;
+    right: 5%;
+  }
+
+  #chat-input-area {
+    flex-direction: row; /* Ensure buttons stay in line */
+  }
+
+  #chat-input {
+    font-size: 16px;
+  }
+
+  #send-chat,
+  #docs-chat {
+    width: 45px;
+    height: 45px;
+  }
+}
 
 #chat-button:hover {
   background: #000000;
@@ -249,7 +325,7 @@ button:hover {
   position: fixed;
   bottom: 80px;
   right: 20px;
-  width: 300px;
+  width: 320px;
   background: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -263,133 +339,43 @@ button:hover {
 #chat-header {
   background: #f5f518;
   color: white;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-/* Online Green Dot */
-#online-status {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.online-indicator {
   width: 10px;
   height: 10px;
-  background: #00ff00;
+  background-color: green;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 1px solid white;
 }
 
 #close-chat {
   background: transparent;
   color: white;
   border: none;
+
   font-size: 20px;
   cursor: pointer;
 }
-
-/* Chat Content */
-#chat-content {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  overflow-y: auto;
-}
-
-#chat-messages {
-  height: 400px;
-  overflow-y: auto;
-}
-
-#chat-input-container {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
-
-/* Chat Input Area */
-#chat-input-area {
-  display: flex;
-  align-items: center;
-  gap: 7px; /* Space between the elements */
-  padding: 10px;
-  border-top: 1px solid #f5f518;
-}
-
-/* Chat Input */
-#chat-input {
-  flex: 1; /* Make the input field take up the remaining space */
-  padding: 8px;
-  border: 1px solid #f5f2f2;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-/* Buttons (Send and Docs) */
-#send-chat,
-#docs-chat {
-  background: #f5f518;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 18px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease-in-out;
-}
-
-#send-chat:hover,
-#docs-chat:hover {
-  background: #f5f518;
-}
-
-/* Specific Icons for Buttons */
-#send-chat i,
-#docs-chat i {
-  font-size: 16px;
-}
-
-/* Insert and Docs Buttons */
-#insert-docs-container {
-  display: flex;
-  position: fixed;
-  justify-content: flex-end;
-  padding: 10px;
-  gap: 10px;
-}
-
-#insert-button,
-#docs-button {
-  background: #f5f518;
-  color: white;
-  border: none;
-  padding: 8px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-#insert-button:hover,
-#docs-button:hover {
-  background: #f5f518;
-}
-
-/* For responsiveness */
+/* end of chat button*/
+/* Responsive Adjustments */
 @media only screen and (max-width: 600px) {
   #chat-box {
     width: 90%;
-    bottom: 10px;
+    right: 5%;
   }
 }
-/* end of chatbox */
-
 /* curve image home page header section*/
 .hero_area {
   position: relative;
