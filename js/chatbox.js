@@ -40,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Return HTML form as a string
       return `
+      <div class="bot-message-container">
+            <p class="bot-message-text">"Please share your details so we can reach out to you, even if you leave the site.</p>
           <form id="userForm">
               <label for="username">Name:</label>
               <input type="text" id="username" name="username" required><br>
@@ -69,12 +71,24 @@ document.addEventListener("DOMContentLoaded", function () {
           const email = document.getElementById("email").value;
 
           // Show the submitted data in the chat
-          addMessage("You", `Thank you, ${name}! We will contact you at ${email} or ${phone}.`);
+          addMessage("AI Chatbot", `Thank you, ${name}! We will contact you at ${email} or ${phone}.`);
 
           // Clear the form after submission
           form.parentElement.innerHTML = "Your details have been submitted. Thank you!";
       });
   }
+
+  // Function to display messages and auto-scroll to the latest message
+function addMessage(sender, message) {
+    const msgDiv = document.createElement("div");
+    msgDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    
+    // Append message
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  }
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 
   // Send message on button click
   sendChat.addEventListener("click", function () {

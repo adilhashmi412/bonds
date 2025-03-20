@@ -342,6 +342,35 @@ button:hover {
   border-top: 4px solid #f5f518;
   z-index: 9999;
 }
+/* Chat Messages Area */
+#chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto; /* Enables scrolling */
+  max-height: 350px; /* Limits message area height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns messages from the top *//
+}
+
+#chat-messages div {
+  margin-bottom: 8px; /* Keeps messages slightly separated */
+}
+
+/* Custom Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
+#chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
 
 #chat-header {
   background: #f5f518;
@@ -448,6 +477,82 @@ button:hover {
 }
 
 /* end of chat bot */
+
+/* Container for bot message and form */
+.bot-message-container {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
+  margin: 5px auto;
+  text-align: center;
+}
+
+/* Bot's message text */
+.bot-message-text {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Compact Form */
+.bot-message-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;  /* Reduced space between elements */
+}
+
+/* Labels */
+.bot-message-container label {
+  font-weight: 600;
+  font-size: 12px;
+  color: #444;
+  text-align: left;
+  margin-bottom: 2px; /* Reduced margin */
+}
+
+/* Input Fields */
+.bot-message-container input {
+  width: 100%;
+  padding: 8px; /* Reduced padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 13px;
+  outline: none;
+}
+
+.bot-message-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+/* Submit Button */
+.bot-message-container button {
+  background: #007bff;
+  color: white;
+  padding: 8px; /* Reduced padding */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.bot-message-container button:hover {
+  background: #0056b3;
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  .bot-message-container {
+      max-width: 90%;
+  }
+}
+
 
 /* curve image home page header section*/
 .hero_area {
