@@ -207,7 +207,7 @@ a:focus {
 button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #f5f518;
   color: white;
   border: none;
   cursor: pointer;
@@ -217,8 +217,76 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #f5f518;
 }
+
+/*Start of 3easy step code */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+.heading_container2 { 
+  position: relative; background-color: #f5f5f5; /* Light background */ 
+  border-radius: 0 250px 250px 0; /* Curved shape on one side */ 
+  padding: 10px 10px; 
+  overflow: hidden; /* Ensures clean shape */
+}
+
+h1 {
+  font-size: 24px;
+  color: #f5f518;
+}
+
+p {
+  font-size: 18px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.step {
+  text-align: center;
+  width: 200px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  background-color: #f5f518;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto;
+}
+
+.icon img {
+  width: 60%;
+  height: 60%;
+}
+
+h2 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.step p {
+  font-size: 16px;
+  color: #666;
+}
+
+
 /* Start of chatbot*/
 
 #chat-button {
@@ -1218,7 +1286,7 @@ button:hover {
   display: inline-block;
   padding: 10px 65px;
   background-color: #f5f518;
-  color: #ffffff;
+  color: #e01414;
   border-radius: 3px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1371,7 +1439,7 @@ button:hover {
   display: inline-block;
   padding: 10px 55px;
   background-color: #f8842b;
-  color: #ffffff;
+  color: #0a0505;
   border-radius: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
