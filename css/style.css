@@ -680,6 +680,91 @@ h2 {
   padding-left: 25px;
 }
 
+/* Fix Navbar Height & Padding */
+.navbar {
+  height: 80px; /* Set fixed height */
+  min-height: 80px; /* Prevent shrinking */
+  padding: 10px 20px; /* Keep consistent padding */
+  transition: height 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Ensure Navbar Brand (Logo + Name) is Centered */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company-logo {
+  height: 50px; /* Fixed size */
+  width: auto;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f5f518; /* Highlight effect */
+}
+
+/* Quote Button (Aligned Properly) */
+.quote_btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.quote_btn {
+  padding: 8px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  background: #f5f518;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.quote_btn:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure No Extra Margin/Padding Between Pages */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 15px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quote_btn-container {
+    margin-top: 10px;
+  }
+}
+
 .navbar-brand {
   font-size: 28px;
   font-weight: bold;
@@ -721,7 +806,7 @@ h2 {
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 10px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
