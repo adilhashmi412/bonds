@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Get Started Button -->
+    <button id="getStartedBtn" class="btn">Get Started</button>
+
+    <!-- Multi-Step Form Modal -->
+    <div id="formContainer" class="hidden">
+        <div class="form-box">
+            <span class="close-btn">&times;</span>
+            <h2>Get Started</h2>
+
+            <form id="multiStepForm">
+                <!-- Step 1: Personal Info -->
+                <div class="step active">
+                    <h3>Personal Info</h3>
+                    <label>First Name*</label>
+                    <input type="text" id="firstName" required>
+
+                    <label>Last Name*</label>
+                    <input type="text" id="lastName" required>
+
+                    <label>Email*</label>
+                    <input type="email" id="email" required>
+
+                    <label>Phone*</label>
+                    <input type="tel" id="phone" required>
+
+                    <button type="button" class="nextBtn">Next</button>
+                </div>
+
+                <!-- Step 2: Applicant Info -->
+                <div class="step">
+                    <h3>Applicant Info</h3>
+                    <label>Address*</label>
+                    <input type="text" id="address" required>
+
+                    <label>City*</label>
+                    <input type="text" id="city" required>
+
+                    <button type="button" class="prevBtn">Previous</button>
+                    <button type="button" class="nextBtn">Next</button>
+                </div>
+
+                <!-- Step 3: Vehicle Info -->
+                <div class="step">
+                    <h3>Vehicle Info</h3>
+                    <label>Vehicle Type*</label>
+                    <input type="text" id="vehicleType" required>
+
+                    <label>License Plate*</label>
+                    <input type="text" id="licensePlate" required>
+
+                    <button type="button" class="prevBtn">Previous</button>
+                    <button type="submit" class="submitBtn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/getstarted.js"></script>
+</body>
+</html>

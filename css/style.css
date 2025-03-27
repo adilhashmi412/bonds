@@ -1154,10 +1154,11 @@ body {
 /* about section css start */
 .about_section {
   position: relative;
-  background-color: #f5f5f5; /* Light background */
+  background-image: url('/images/footerbk.jpg'); /* Light background */
   border-radius: 0 250px 250px 0; /* Curved shape on one side */
   padding: 80px 20px;
   overflow: hidden; /* Ensures clean shape */
+  
 }
 
 
