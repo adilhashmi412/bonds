@@ -232,9 +232,9 @@ body {
 
 .heading_container2 { 
   position: relative; background-color: #f5f5f5; /* Light background */ 
-  border-radius: 0 250px 250px 0; /* Curved shape on one side */ 
+  border-radius: 10 250px 250px 10; /* Curved shape on one side */ 
   padding: 10px 10px; 
-  overflow: hidden; /* Ensures clean shape */
+   /* Ensures clean shape */
 }
 
 h1 {
