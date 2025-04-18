@@ -368,8 +368,90 @@ h2 {
   font-size: 16px;
   color: #666;
 }
+/*Start of transition image */
+/* Start of transition image */
+.overlay-hero {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  background: url('images/background.jpg') center/cover no-repeat; /* Your main background photo */
+  display: flex;
+  align-items: center;
+  justify-content: start; /* Align items to the left, with space for the image */
+  color: white;
+  text-align: left;
+  padding: 0 50px;
+}
 
+.image-overlay {
+  position: relative; /* Keeps it inline with the layout */
+  margin-left: 20px; /* Places it slightly to the right of the content */
+  z-index: 1;
+  max-width: 200px; /* Reduces the image size */
+  opacity: 0.8; /* Slight transparency to blend with the background */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
+.image-overlay img {
+  max-width: 100%; /* Ensures the image is responsive */
+  transform: scaleX(-1); /* Flips the image horizontally */
+}
+
+.image-overlay img:hover {
+  transform: scale(1.1) scaleX(-1); /* Slight zoom with horizontal flip on hover */
+  opacity: 1; /* Full opacity on hover */
+}
+
+.content-wrapper {
+  z-index: 2; /* Ensures the text is above the image */
+  max-width: 40%; /* Adjusted to make room for the image */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Transparent dark background for text readability */
+  border-radius: 10px;
+}
+
+.content-wrapper h1 {
+  font-size: 2.5rem; /* Slightly smaller heading */
+  margin-bottom: 20px;
+}
+
+.content-wrapper p {
+  font-size: 1rem; /* Slightly smaller paragraph text */
+  margin-bottom: 20px;
+}
+
+.content-wrapper .btn {
+  background: #ffdd00;
+  color: #004aad;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.content-wrapper .btn:hover {
+  background: #004aad;
+  color: #ffdd00;
+}
+
+@media (max-width: 768px) {
+  .overlay-hero {
+    flex-direction: column; /* Stacks the image and text vertically on smaller screens */
+    padding: 20px;
+  }
+
+  .content-wrapper {
+    max-width: 100%; /* Full width on smaller screens */
+    text-align: center; /* Center-aligns text for mobile */
+  }
+
+  .image-overlay {
+    max-width: 150px; /* Further reduces the image size for smaller screens */
+    margin-bottom: 20px; /* Adds spacing between image and text on mobile */
+  }
+}
+
+/*End  of transition image */
 /* Start of chatbot*/
 
 #chat-button {
