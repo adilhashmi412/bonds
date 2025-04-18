@@ -131,6 +131,48 @@ a:focus {
   }
 }
 
+/* search */
+.top-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.phone {
+  font-size: 14px;
+  color: #555;
+  margin-right: 10px; /* Space between phone and icon */
+  font-weight: normal;
+  line-height: 1; /* Matches the height of the icon */
+  transition: color 0.3s ease; /* Smooth color transition */
+  cursor: pointer; /* Adds a pointer cursor */
+}
+
+.phone:hover {
+  color: #ffffff; /* Changes text color on hover */
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+  background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat center center;
+  background-size: contain; /* Ensures the icon fits within the box */
+  cursor: pointer; /* Adds a pointer cursor */
+  transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  display: inline-block; /* Allows the element to respect centering properties */
+  text-align: center; /* Centers the icon */
+}
+
+
+.search-icon:hover {
+  transform: scale(1.2); /* Slight zoom-in effect */
+  filter: brightness(1.2) sepia(1) hue-rotate(-30deg) saturate(3); /* Adds a yellowish tint */
+  background-color: #ffffff; /* Apply yellow background on hover */
+}
+
 
 /* ✅ Smooth fade-in animation */
 .fade-in {
@@ -154,7 +196,48 @@ a:focus {
     transform: translateY(0);
   }
 }
+/* start Running phone no */
+.icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 200px; /* Adjust width as needed */
+  overflow: hidden; /* Ensures text disappears into the container */
+}
 
+.search-icon {
+  width: 36px; /* Slightly smaller for a modern look */
+  height: 36px;
+  background-color: #f5f518; /* Modern blue color */
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-left: 8px; /* Adjusted spacing for balance */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a professional touch */
+}
+.phone {
+  white-space: nowrap;
+  display: inline-block;
+  animation: slidePhone 5s linear infinite; /* Duration and looping */
+}
+@keyframes slidePhone {
+  0% {
+    transform: translateX(100%); /* Starts from outside right */
+  }
+  40% {
+    transform: translateX(10%); /* Stops at the icon */
+  }
+  60% {
+    transform: translateX(0); /* Pause for a moment at the icon */
+  }
+ 
+}
+
+
+/* End  Running phone no */
 
 /* Zigzag Square Buttons Section */
 .zigzag-buttons {
@@ -1436,7 +1519,7 @@ body {
 }
 
 .info_section .info_contact .contact_link_box a:hover {
-  color: #f8842b;
+  color: #f5f518;
 }
 
 .info_section .info_social {
@@ -1463,7 +1546,7 @@ body {
 }
 
 .info_section .info_social a:hover {
-  color: #f8842b;
+  color: #f5f518;
 }
 
 .info_section .info_links {
@@ -1490,7 +1573,7 @@ body {
 }
 
 .info_section .info_links a:hover {
-  color: #f8842b;
+  color: #f5f518;
 }
 
 .info_section form input {
@@ -1524,12 +1607,12 @@ body {
   text-align: center;
   display: inline-block;
   padding: 10px 55px;
-  background-color: #f8842b;
+  background-color: #f5f518;
   color: #0a0505;
   border-radius: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  border: 1px solid #f8842b;
+  border: 1px solid #f5f518;
   margin-top: 15px;
 }
 
