@@ -368,6 +368,40 @@ h2 {
   font-size: 16px;
   color: #666;
 }
+/* Start of searchbox css*/
+/* Search Bar Container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px; /* Smaller width */
+  height: 35px; /* Smaller height */
+  border: 1px solid #ccc; /* Thin border */
+  border-radius: 18px; /* Rounded corners */
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Input Field */
+.search-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0 12px; /* Adjusted padding */
+  font-size: 12px; /* Smaller font size */
+  outline: none;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Placeholder Color */
+.search-input::placeholder {
+  color: #aaa; /* Subtle placeholder text */
+}
+
+/* End of searchbox css*/
+
 /*Start of transition image */
 /* Start of transition image */
 .overlay-hero {
@@ -849,16 +883,12 @@ h2 {
 .navbar {
   height: 80px; /* Set fixed height */
   min-height: 80px; /* Prevent shrinking */
-  padding: 10px 20px; /* Keep consistent padding */
+  padding: 10px 120px; /* Keep consistent padding */
   transition: height 0.3s ease-in-out; /* Smooth transition */
 }
 
 /* Ensure Navbar Brand (Logo + Name) is Centered */
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+
 
 .company-logo {
   height: 50px; /* Fixed size */
